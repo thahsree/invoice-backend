@@ -106,7 +106,7 @@ const data = {
 
 app.get('/',(req,res)=>{
 
-    res.send('HELLO WORLD')
+    res.status(200).json({"message":'HELLO WORLD'})
 })
 app.get('/invoice', async (req, res) => {
     try {
