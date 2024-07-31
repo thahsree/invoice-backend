@@ -104,11 +104,11 @@ const data = {
 
 // Route to generate and download the invoice
 
-app.get('/',(req,res)=>{
+app.get('/api',(req,res)=>{
 
     res.status(200).json({"message":'HELLO WORLD'})
 })
-app.get('/invoice', async (req, res) => {
+app.get('/api/invoice', async (req, res) => {
     try {
         const result = await easyinvoice.createInvoice(data);
         // The response will contain a base64 encoded PDF file
