@@ -103,6 +103,11 @@ const data = {
 };
 
 // Route to generate and download the invoice
+
+app.get('/',(req,res)=>{
+
+    res.send('HELLO WORLD')
+})
 app.get('/invoice', async (req, res) => {
     try {
         const result = await easyinvoice.createInvoice(data);
